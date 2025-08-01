@@ -43,6 +43,7 @@ interface CommentCountProps extends DiscussionEmbedProps {
   shortname: string;
   config: DisqusConfig;
   children?: React.ReactNode;
+  skipCleanupOnUnmount?: boolean;
 }
 
 interface CommentEmbedProps {

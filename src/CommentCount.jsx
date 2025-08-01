@@ -37,6 +37,9 @@ export class CommentCount extends React.Component {
     }
 
     componentWillUnmount() {
+        if (this.props.skipCleanupOnUnmount){
+            return
+        }
         this.cleanInstance();
     }
 
@@ -83,4 +86,5 @@ CommentCount.propTypes = {
     }).isRequired,
     className: PropTypes.string,
     children: PropTypes.node,
+    skipCleanupOnUnmount: PropTypes.bool,
 };
