@@ -18,7 +18,7 @@
     "build:example": "webpack --config config/webpack.examples.config.js --progress --colors",
     "build:dist": "webpack --config config/webpack.dist.config.js --progress --colors && uglifyjs dist/index.js -cm -o dist/index.min.js --source-map content=dist/index.js.map,url=index.min.js.map",
     "build:babel": "babel src --out-dir lib",
-    "build": "npm run build:example && npm run build:dist && npm run build:babel",
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider && npm run build:example && npm run build:dist && npm run build:babel",
     "lint": "eslint src/* tests/*",
     "test": "jest --config=./config/jest.config.js",
     "prepublish": "npm run build",
