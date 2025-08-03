@@ -21,7 +21,7 @@
     "build": "export NODE_OPTIONS=--openssl-legacy-provider && npm run build:example && npm run build:dist && npm run build:babel",
     "lint": "eslint src/* tests/*",
     "test": "jest --config=./config/jest.config.js",
-    "prepublish": "npm run build",
+    "prepublishOnly": "npm run build",
     "postpublish": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags"
   },
   "author": "Ryan Valentin",

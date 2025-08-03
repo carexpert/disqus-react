@@ -1,7 +1,7 @@
 # Project
 build
-dist
-lib
+# dist
+# lib
 .vscode
 
 # Logs
