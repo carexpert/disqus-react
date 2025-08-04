@@ -37,7 +37,7 @@ export class CommentCount extends React.Component {
     }
 
     componentWillUnmount() {
-        if (this.props.skipCleanupOnUnmount){
+        if (this.props.skipCleanupOnUnmount) {
             return
         }
         this.cleanInstance();
@@ -62,7 +62,7 @@ export class CommentCount extends React.Component {
 
     render() {
         // eslint-disable-next-line no-unused-vars
-        const { shortname, config, children, className, ...rest } = this.props;
+        const { shortname, config, children, className, skipCleanupOnUnmount, ...rest } = this.props;
         const additionalClass = className ? ` ${className}` : '';
         return (
             <span
